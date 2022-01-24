@@ -285,10 +285,5 @@ def train(in_folder: str, out_folder: str) -> None:
 
 if __name__ == '__main__':
 
-	#####remove these as the folders will be given from command line
-	# m_folder = "E:\\Modelling\\side\\recsystar\\recsys\\"
-	# in_folder = m_folder + "data\\"
-	# out_folder = m_folder + "model\\"
-	# train(in_folder,out_folder)
 	fire.Fire(train)
  
