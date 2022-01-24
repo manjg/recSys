@@ -53,11 +53,11 @@ C is the mean vote across the whole report
 
 The content based model is not really personel. It is only capable of suggesting movies which are close to a certain movie. That is, it is not capable of capturing tastes and providing recommendations across genres.
 
-To improve upon the limitation above collabirative filtering is used to make recommendations. Collaborative model doesn't care what the movie is (or what it contains). It is based on the idea that users similar to me can be used to predict how much I will like a particular product those users have liked but I have not. It works purely on the basis of an assigned movie ID and tries to predict ratings based on how the other users have predicted the movie.
+To improve upon the limitation above collabirative filtering is used to make recommendations. Collaborative model doesn't care what the movie is (or what it contains). It is based on the idea that users similar to me can be used to predict how much I will like a particular movie those users have liked but I have not. It works purely on the basis of an assigned movie ID and tries to predict ratings based on how the other users have predicted the movie.
 
-Two collaborative models using Surprise Library based on single value decomposition SVD and KNNWithMeans are made to predict the movie rating based on a user profile without knowing the past behaviour of the user. 
+Two collaborative models using Surprise Library based on singular value decomposition SVD and KNNWithMeans are made to predict the movie rating based on a user profile without knowing the past behaviour of the user. 
 
-The hybrid model recommends movies based on either 'metadata' or 'description' and then refining the content based recommendation as per predicted movies ratings(using either SVD or KNNWithMeans) by the user.
+The hybrid model recommends movies based on either 'metadata' or 'description' and then refining the content based recommendation as per predicted movies ratings(using either SVD or KNNWithMeans) for the user.
 
 Different combination of the models can be put through A/B testing to decide best recommendations.
 
