@@ -190,7 +190,7 @@ def load_data(in_folder: str):
 	#grab the cast and keywords from the list of dictionaries of those columns
 	movies_df['cast'] = movies_df['cast'].apply(lambda x: [i['name'].lower() for i in x])
 	movies_df['keywords'] = movies_df['keywords'].apply(lambda x: [i['name'].lower() for i in x])
-	movies_md = movies_md.drop_duplicates().reset_index(drop=True)
+	movies_df = movies_df.drop_duplicates().reset_index(drop=True)
 
 	#keep only the keywords that appear more than once
 	movies_df = preprocess_keywords(movies_df) 
